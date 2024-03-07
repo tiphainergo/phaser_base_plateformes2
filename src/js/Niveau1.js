@@ -129,7 +129,7 @@ export default class Niveau1 extends Phaser.Scene {
       //  propriétées physiqyes de l'objet player :
       player.setBounce(0); // on donne un petit coefficient de rebond
       player.setCollideWorldBounds(true); // le player se cognera contre les bords du monde
-      player.setSize(32, 40);
+      player.setSize(32, 46);
       player.setDepth(10);
     
     
