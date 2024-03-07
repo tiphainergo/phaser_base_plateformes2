@@ -245,5 +245,4 @@ function ramasserEtoile(un_player, une_etoile) {
     zone_texte_score.setText("Score: " + score);
     
     // Vérifier si le joueur peut entrer dans la première porte
-    verifScorePourPorte.call(this);
-}
+    verifScorePourPorte.call(th
