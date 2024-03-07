@@ -14,14 +14,18 @@ export default class End extends Phaser.Scene {
       .image(500, 400, "End")
       .setDisplaySize(1000, 1000);
   
-        this.add.text(350, 180, "Congratulations", {
+        this.add.text(50, 200, "Félicitations ! Vous avez triomphé et remporté la victoire !",{
           fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif',
-          fontSize: "30pt",
+          fontSize: "25pt",
           color: "black"
         });
-
+        this.add.text(190, 240, "Vous êtes le véritable champion de ce jeu !",{
+            fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif',
+            fontSize: "25pt",
+            color: "black"
+          });
       //on ajoute un bouton de clic, nommé bouton_play
-      var bouton_replay = this.add.image(510, 250, "imageBoutonReplay")
+      var bouton_replay = this.add.image(503, 350, "imageBoutonReplay")
       .setDepth(1)
       .setScale(0.25); 
       //=========================================================
