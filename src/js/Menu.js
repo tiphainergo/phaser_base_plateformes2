@@ -11,21 +11,19 @@ export default class Menu extends Phaser.Scene {
     create() {
      // on place les éléments de fond
       this.add
-        .image(0, 0, "menu")
-        .setOrigin(10)
-        .setDepth(0)
-        .setDisplaySize(640, 800);
+      .image(500, 400, "menu")
+      .setDisplaySize(1000, 1000);
   
-        this.add.text(200, 200, "Bienvenue dans le jeu", {
+        this.add.text(200, 40, "Bienvenue dans EPF Olympic Games", {
           fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif',
           fontSize: "30pt",
           color: "black"
         });
 
       //on ajoute un bouton de clic, nommé bouton_play
-      var bouton_play = this.add.image(400, 300, "imageBoutonPlay")
+      var bouton_play = this.add.image(520, 425, "imageBoutonPlay")
       .setDepth(1)
-      .setScale(0.25); 
+      .setScale(0.5); 
       //=========================================================
       //on rend le bouton interratif
       bouton_play.setInteractive();
@@ -42,7 +40,7 @@ export default class Menu extends Phaser.Scene {
       //Cas ou la sourris clique sur le bouton play :
       // on lance le niveau 1
       bouton_play.on("pointerup", () => {
-        this.scene.start("Selection");
+        this.scene.start("Regle");
       });
     }
   }   

@@ -5,6 +5,7 @@ var groupe_etoiles;
 var score= 0;
 var zone_texte_score; 
 
+
 export default class Selection extends Phaser.Scene {
  
     constructor() {
@@ -111,7 +112,7 @@ Fond.setCollisionByProperty({ estSolide: true });
   player = this.physics.add.sprite(150, 1600, "img_perso");
 
   //  propriétées physiqyes de l'objet player :
-  player.setBounce(0.2); // on donne un petit coefficient de rebond
+  player.setBounce(0.38); // on donne un petit coefficient de rebond
   player.setCollideWorldBounds(true); // le player se cognera contre les bords du monde
 
   /***************************
@@ -194,11 +195,11 @@ verifScorePourPorte.call(this);
     player.anims.play("anim_face");
   }
   if (clavier.up.isDown && player.body.blocked.down) {
-    player.setVelocityY(-350);
+    player.setVelocityY(-370);
   }  
   if (clavier.space.isDown) {
-    if (this.physics.overlap(player, this.porte1)) this.scene.switch("Niveau1");
-    if (this.physics.overlap(player, this.porte2)) this.scene.switch("Niveau2");
+    if (this.physics.overlap(player, this.porte1)) this.scene.switch("Reglelulu");
+    if (this.physics.overlap(player, this.porte2)) this.scene.switch("Reglecloclo");
   }
 }
 }
