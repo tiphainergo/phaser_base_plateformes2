@@ -31,7 +31,7 @@ export default class Niveau1 extends Phaser.Scene {
     preload() {
       // tous les assets du jeu sont placés dans le sous-répertoire src/assets/
     
-      this.load.spritesheet("img_perso", "src/assets/dude.png", {
+      this.load.spritesheet("img_perso3", "src/assets/dude2.png", {
         frameWidth: 32,
         frameHeight: 48
       });
@@ -124,7 +124,7 @@ export default class Niveau1 extends Phaser.Scene {
        ****************************/
     
       // On créée un nouveeau personnage : player
-      player = this.physics.add.sprite(100, 416, "img_perso");
+      player = this.physics.add.sprite(100, 416, "img_perso3");
     
       //  propriétées physiqyes de l'objet player :
       player.setBounce(0); // on donne un petit coefficient de rebond
@@ -144,14 +144,14 @@ export default class Niveau1 extends Phaser.Scene {
     
       this.anims.create({
         key: "anim_marcher",
-        frames: this.anims.generateFrameNumbers("img_perso", { start: 5, end: 8 }),
+        frames: this.anims.generateFrameNumbers("img_perso3", { start: 5, end: 8 }),
         frameRate: 10,
         repeat: -1
       });
     
       this.anims.create({
         key: "anim_face",
-        frames: [{ key: "image_perso", frame: 4 }],
+        frames: [{ key: "image_perso3", frame: 4 }],
         frameRate: 20,
       });
     

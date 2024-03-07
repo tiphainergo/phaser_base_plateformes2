@@ -118,7 +118,7 @@ export default class Niveau2 extends Phaser.Scene {
       groupe_ennemis.children.iterate(function iterateur(un_ennemi) {
         un_ennemi.setVelocityX(-40);
         un_ennemi.direction = "gauche";
-        un_ennemi.play("anim_ennemi_tourne_gauche", true);
+        un_ennemi.play("anim_ennemi_tourne_left", true);
       }); 
     
       // extraction des poitns depuis le calque calque_cibles, stockage dans tab_points
