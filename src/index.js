@@ -28,4 +28,4 @@ var config = {
 
 // création et lancement du jeu
 var game = new Phaser.Game(config);
-game.scene.start("End"); // lancement de la scene selection
+game.scene.start("Menu"); // lancement de la scene selection
